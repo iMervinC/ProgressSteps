@@ -40,4 +40,13 @@ function update() {
 
   progress.style.width =
     ((active.length - 1) / (circle.length - 1)) * 100 + "%";
+
+  if (currentActive === 1) {
+    prev.disabled = true;
+  } else if (currentActive === circle.length) {
+    next.disabled = true;
+  } else {
+    next.disabled = false;
+    prev.disabled = false;
+  }
 }
